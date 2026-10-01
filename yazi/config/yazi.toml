@@ -1,0 +1,41 @@
+# Starter Yazi configuration
+# Place in your real config dir: %APPDATA%\yazi\config\yazi.toml
+# (copy this file there to use it)
+
+[manager]
+# Show hidden files (dotfiles)
+show_hidden = false
+
+# Sort order: "natural", "lexical", "mtime", "btime", "size", "random"
+sort_by = "natural"
+
+# The width of the current tab indicator
+tab_width = 4
+
+[open]
+# Rules for opening by extension. Default editor for text.
+rules = [
+  # Open common text/code files in EDITOR
+  { name = "*.txt", use = "edit" },
+  { name = "*.md",  use = "edit" },
+  { name = "*.rs",  use = "edit" },
+
+  # Everything that matches no rule above -> OS default app
+  { mime = "*", use = "open" },
+]
+
+[opener]
+# Define the "edit" opener (uses $EDITOR fallback to notepad via cmd)
+edit = [
+  { run = '${EDITOR:-cmd /c start notepad} "$@"', desc = "Edit in editor", block = true },
+]
+
+# Optional: set the default entry/launch mode. "none" lets yazi decide.
+[preview]
+# Whether to run image/video previews using the terminal's sixel/kitty/graphics
+# protocol when available (wezterm supports this).
+image_quality = 75
+
+[max_width]
+# Percentage of terminal width for previews
+preview = 50
