@@ -94,6 +94,7 @@ Caveat on Windows: `wezterm ls-fonts` output contains NUL bytes; pipe through
 ## Source Files in This Folder
 
 - `wezterm.lua` — active WezTerm configuration (same as `C:\Users\AliFa\.wezterm.lua`).
+- `CHEATSHEET.md` — common WezTerm keybindings and configuration quick reference.
 - `fonts/` — the 16 TTF files of the `BlexMono Nerd Font Mono` family (Mono variant)
   extracted from the official nerd-fonts `IBMPlexMono.zip` release (latest), weights:
   Regular, Italic, Bold, Bold Italic, ExtraLight, ExtraLight Italic, Light,
